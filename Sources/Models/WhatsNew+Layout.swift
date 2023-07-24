@@ -48,6 +48,10 @@ public extension WhatsNew {
         /// The footer visual effect view padding
         public var footerVisualEffectViewPadding: EdgeInsets
         
+        // MARK: Fonts
+        public var titleFont:Font
+        public var featureFont:Font
+
         // MARK: Initializer
         
         /// Creates a new instance of `WhatsNew.Layout`
@@ -77,7 +81,8 @@ public extension WhatsNew {
             featureVerticalSpacing: CGFloat = 2,
             footerActionSpacing: CGFloat = 15,
             footerPrimaryActionButtonCornerRadius: CGFloat = 14,
-            footerVisualEffectViewPadding: EdgeInsets = .init(top: -10, leading: 0, bottom: 0, trailing: 0)
+            footerVisualEffectViewPadding: EdgeInsets = .init(top: -10, leading: 0, bottom: 0, trailing: 0),
+            titleFont:Font = .largeTitle, featureFont:Font = .subheadline
         ) {
             self.showsScrollViewIndicators = showsScrollViewIndicators
             self.scrollViewBottomContentInset = scrollViewBottomContentInset
@@ -92,6 +97,8 @@ public extension WhatsNew {
             self.footerActionSpacing = footerActionSpacing
             self.footerPrimaryActionButtonCornerRadius = footerPrimaryActionButtonCornerRadius
             self.footerVisualEffectViewPadding = footerVisualEffectViewPadding
+            self.featureFont = featureFont
+            self.titleFont = titleFont
         }
         
     }
